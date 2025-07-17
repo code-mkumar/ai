@@ -1,6 +1,7 @@
 [build]
-  functions = "netlify/functions"
   publish = "public"
+  functions = "netlify/functions"
+  command = "npm install"  # This ensures @google/generative-ai is installed
 
-[dev]
-  autoLaunch = true
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"  # Ensures functions get bundled properly
