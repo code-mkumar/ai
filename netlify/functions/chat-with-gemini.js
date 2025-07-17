@@ -2,7 +2,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 exports.handler = async (event, context) => {
   const { message } = JSON.parse(event.body || "{}");
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = "KeyAIzaSyCj2bshMo8Uo3_EuRWytkEKEWoIu0riVR8";
 
   if (!apiKey) {
     return { statusCode: 500, body: JSON.stringify({ error: "API key missing" }) };
